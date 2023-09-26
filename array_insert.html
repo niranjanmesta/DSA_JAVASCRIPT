@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array_insert</title>
+    <script>
+
+        function insertElement() {
+        let data = [23,54,30,65,12,32,6,];
+            let new_element= document.getElementById('insertElement').value;
+                   new_element=parseInt(new_element)
+                   let position = document.getElementById('position').value;
+                   console.log(data)
+        //use of reverse loop
+        for( let i=data.length-1;i>=0;i--)
+        {
+if(i>=position)
+
+{
+    data[i+1]=data[i];
+    if(i==position){
+        data[i]=new_element;    }
+
+}
+        }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="position" placeholder="Enter position"  /> <br><br>
+    <input type="text" id="insertElement" placeholder="Enter the New Element To insert">
+    <button onclick="insertElement()" >Insert</button>
+</body>
+</html>
